@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen Project - Secure Authentication Demo | Navroj Billing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="apliance.js"></script>
+    <link rel="stylesheet" href="building.css">
+</head>
+<body class="bg-gray-900 text-white min-h-screen">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 bg-opacity-80 backdrop-blur-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.HTML" class="text-indigo-400 text-2xl font-extrabold tracking-tight hover:text-indigo-300 transition duration-300">Billing</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="index.HTML#about" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">About</a>
+                    <a href="index.HTML#languages" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Languages</a>
+                    <a href="index.HTML#experience" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Experience</a>
+                    <a href="index.HTML#projects" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Projects</a>
+                    <a href="index.HTML#involvement" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Involvement</a>
+                    <a href="index.HTML#skills" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Skills</a>
+                    <a href="index.HTML#contact" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-300">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.HTML#about" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="index.HTML#languages" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Languages</a>
+                <a href="index.HTML#experience" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Experience</a>
+                <a href="index.HTML#projects" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+                <a href="index.HTML#involvement" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Involvement</a>
+                <a href="index.HTML#skills" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Skills</a>
+                <a href="index.HTML#contact" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Project Hero Section -->
+        <section class="py-20 bg-gradient-to-br from-indigo-900 via-gray-900 to-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center lg:items-start gap-10">
+                    <!-- Project Badge and Title -->
+                    <div class="flex-1">
+                        <div class="inline-block mb-4">
+                            <span class="px-4 py-2 bg-indigo-600 text-indigo-100 rounded-full text-sm font-semibold">Featured Project</span>
+                        </div>
+                        <h1 class="text-5xl lg:text-6xl font-extrabold text-white mb-4 leading-tight">
+                            Pen Project
+                        </h1>
+                        <p class="text-2xl text-indigo-300 mb-6">
+                            Secure Authentication Demo (Flask)
+                        </p>
+                        <p class="text-lg text-gray-300 mb-8 max-w-xl">
+                            A comprehensive Flask-based authentication system designed as a penetration testing and secure web development exercise. Built to demonstrate industry best practices in user authentication, session handling, and defensive security controls.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="https://github.com" 
+                               target="_blank"
+                               class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-300">
+                                <i data-feather="github" class="h-5 w-5 mr-2"></i>
+                                View on GitHub
+                            </a>
+                            <a href="#overview"
+                               class="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-300 border border-gray-600">
+                                <i data-feather="arrow-down" class="h-5 w-5 mr-2"></i>
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack Preview -->
+                    <div class="flex-1">
+                        <div class="bg-gray-800 bg-opacity-60 rounded-lg p-8 backdrop-blur-sm">
+                            <h3 class="text-xl font-semibold text-white mb-6">Tech Stack</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <span class="text-indigo-400 text-lg">▸</span>
+                                    <span class="ml-4 text-gray-300"><strong>Backend:</strong> Python, Flask</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-indigo-400 text-lg">▸</span>
+                                    <span class="ml-4 text-gray-300"><strong>Database:</strong> SQLite</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-indigo-400 text-lg">▸</span>
+                                    <span class="ml-4 text-gray-300"><strong>ORM:</strong> SQLAlchemy</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-indigo-400 text-lg">▸</span>
+                                    <span class="ml-4 text-gray-300"><strong>Forms & CSRF:</strong> Flask-WTF</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-indigo-400 text-lg">▸</span>
+                                    <span class="ml-4 text-gray-300"><strong>Frontend:</strong> HTML + CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Main Overview -->
+                    <div class="lg:col-span-2">
+                        <h2 class="text-4xl font-bold text-white mb-6">Project Overview</h2>
+                        <div class="bg-gray-800 bg-opacity-50 rounded-lg p-8 space-y-6">
+                            <p class="text-gray-300 text-lg">
+                                This project is a Flask-based authentication system built as part of a penetration testing / secure web development exercise. It implements user registration, login, session handling, role-based access, and defensive security controls.
+                            </p>
+                            <p class="text-gray-300 text-lg">
+                                <strong class="text-indigo-300">Important Note:</strong> This is not production-ready, but it intentionally demonstrates common security patterns and mitigations in a small, readable codebase. The core logic lives in a single Flask app file for clarity and educational value.
+                            </p>
+                            <div class="border-l-4 border-indigo-500 pl-6 py-4 bg-gray-900 bg-opacity-50 rounded-r-lg">
+                                <h4 class="text-indigo-300 font-semibold mb-2">Intended Use Cases</h4>
+                                <ul class="text-gray-300 space-y-2">
+                                    <li>• Security labs and hands-on learning</li>
+                                    <li>• Penetration testing practice</li>
+                                    <li>• Understanding Flask authentication internals</li>
+                                    <li>• Demonstrating defensive coding patterns</li>
+                                    <li>• Academic coursework and projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Quick Facts</h3>
+                        <div class="space-y-4">
+                            <div class="bg-indigo-900 bg-opacity-40 rounded-lg p-4 border border-indigo-700">
+                                <div class="text-indigo-400 text-sm font-semibold">Language</div>
+                                <div class="text-white text-lg font-bold">Python 3</div>
+                            </div>
+                            <div class="bg-indigo-900 bg-opacity-40 rounded-lg p-4 border border-indigo-700">
+                                <div class="text-indigo-400 text-sm font-semibold">Framework</div>
+                                <div class="text-white text-lg font-bold">Flask</div>
+                            </div>
+                            <div class="bg-indigo-900 bg-opacity-40 rounded-lg p-4 border border-indigo-700">
+                                <div class="text-indigo-400 text-sm font-semibold">Type</div>
+                                <div class="text-white text-lg font-bold">Web Application</div>
+                            </div>
+                            <div class="bg-indigo-900 bg-opacity-40 rounded-lg p-4 border border-indigo-700">
+                                <div class="text-indigo-400 text-sm font-semibold">Status</div>
+                                <div class="text-white text-lg font-bold">Complete</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="py-20 bg-gray-800 bg-opacity-60 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12 text-center">Core Features</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Authentication & Authorization -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700 hover:border-indigo-500 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="lock" class="h-8 w-8 text-indigo-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-white">Authentication & Authorization</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>User registration with validated input</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Login with session management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Logout with session cleanup</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Role-based access (user / admin)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Admin-only access enforcement</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Security Controls -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700 hover:border-indigo-500 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="shield" class="h-8 w-8 text-indigo-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-white">Security Controls</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Password strength validation (upper/lowercase, numbers, special chars)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Password hashing using PBKDF2 (600k iterations)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Account lockout after failed login attempts</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>IP-based rate limiting on login</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Advanced Security -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700 hover:border-indigo-500 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="zap" class="h-8 w-8 text-indigo-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-white">Advanced Security</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>CSRF protection via Flask-WTF</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Secure session cookies (HTTPOnly, SameSite)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Session fixation protection (regeneration)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Login event auditing (IP, user agent, success/failure)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Dashboard & Monitoring -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700 hover:border-indigo-500 transition duration-300">
+                        <div class="flex items-center mb-4">
+                            <i data-feather="activity" class="h-8 w-8 text-indigo-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-white">Dashboard & Monitoring</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Login-only dashboard access</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Recent login activity display</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>User metadata overview</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-indigo-400 mr-3 font-bold">✓</span>
+                                <span>Security headers (CSP, XSS protection, clickjacking prevention)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Structure Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12">Project Structure</h2>
+
+                <div class="bg-gray-800 bg-opacity-70 rounded-lg p-8 border border-gray-700">
+                    <pre class="text-gray-300 text-sm overflow-x-auto"><code>.
+├── app.py               # Main Flask application
+├── pen_project.db       # SQLite database
+├── requirements.txt     # Python dependencies
+├── static/
+│   └── style.css        # Application styling
+├── templates/
+│   ├── index.html       # Home page
+│   ├── login.html       # Login form
+│   ├── register.html    # Registration form
+│   ├── dashboard.html   # User dashboard
+│   ├── admin-login.html # Admin login
+│   └── error.html       # Error handling
+</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Database Schema Section -->
+        <section class="py-20 bg-gray-800 bg-opacity-60 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12">Database Schema</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Users Table -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700">
+                        <h3 class="text-2xl font-bold text-indigo-300 mb-6">users Table</h3>
+                        <ul class="space-y-3 font-mono text-sm">
+                            <li class="text-gray-300"><span class="text-indigo-400">id</span> - Primary Key</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">email</span> - Unique Email Address</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">password_hash</span> - PBKDF2 Hash</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">role</span> - 'user' or 'admin'</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">created_at</span> - Registration Timestamp</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">failed_login_attempts</span> - Failed Attempt Counter</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">locked_until</span> - Account Lockout Time</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">last_login</span> - Last Login Timestamp</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">password_changed_at</span> - Password Update Time</li>
+                        </ul>
+                    </div>
+
+                    <!-- Login Events Table -->
+                    <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700">
+                        <h3 class="text-2xl font-bold text-indigo-300 mb-6">login_events Table</h3>
+                        <ul class="space-y-3 font-mono text-sm">
+                            <li class="text-gray-300"><span class="text-indigo-400">id</span> - Primary Key</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">email_attempted</span> - Attempted Email</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">ip_address</span> - Source IP</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">user_agent</span> - Browser/Client Info</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">success</span> - Boolean (Success/Failure)</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">failure_reason</span> - Error Details</li>
+                            <li class="text-gray-300"><span class="text-indigo-400">timestamp</span> - Event Time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Security Notes Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12">Important Security Notes</h2>
+
+                <div class="space-y-6">
+                    <!-- Production Warning -->
+                    <div class="bg-red-900 bg-opacity-20 border-l-4 border-red-500 rounded-lg p-6">
+                        <div class="flex items-start">
+                            <i data-feather="alert-circle" class="h-6 w-6 text-red-400 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-red-300 mb-2">Not for Production</h3>
+                                <p class="text-gray-300">
+                                    This project is designed for <strong>learning and testing purposes only</strong>. It is not intended for production deployment in any environment handling real user data or sensitive information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Configuration Notes -->
+                    <div class="bg-yellow-900 bg-opacity-20 border-l-4 border-yellow-500 rounded-lg p-6">
+                        <div class="flex items-start">
+                            <i data-feather="info" class="h-6 w-6 text-yellow-400 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-yellow-300 mb-4">Configuration Details</h3>
+                                <ul class="space-y-2 text-gray-300">
+                                    <li><strong>SECRET_KEY:</strong> Falls back to a dev value if not set via environment variable</li>
+                                    <li><strong>HTTPS:</strong> Not enforced; cookies are not Secure by default</li>
+                                    <li><strong>Database:</strong> SQLite is used for simplicity, not scale</li>
+                                    <li><strong>Rate Limiting:</strong> Basic, application-level implementation only</li>
+                                    <li><strong>CSP:</strong> Intentionally permissive to avoid breaking templates</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Learning Benefits -->
+                    <div class="bg-green-900 bg-opacity-20 border-l-4 border-green-500 rounded-lg p-6">
+                        <div class="flex items-start">
+                            <i data-feather="check-circle" class="h-6 w-6 text-green-400 mr-4 flex-shrink-0 mt-1"></i>
+                            <div>
+                                <h3 class="text-xl font-bold text-green-300 mb-4">Learning Value</h3>
+                                <p class="text-gray-300 mb-3">
+                                    This project excels as an educational resource because:
+                                </p>
+                                <ul class="space-y-2 text-gray-300 ml-4">
+                                    <li>• Small, readable codebase for easy comprehension</li>
+                                    <li>• Demonstrates modern security best practices</li>
+                                    <li>• Real-world authentication patterns explained clearly</li>
+                                    <li>• Ideal for security labs and pen-testing practice</li>
+                                    <li>• Perfect for understanding Flask internals</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started Section -->
+        <section class="py-20 bg-gray-800 bg-opacity-60 backdrop-blur-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12">Getting Started</h2>
+
+                <div class="bg-gray-900 bg-opacity-80 rounded-lg p-8 border border-gray-700">
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-6">Installation & Setup</h3>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 bg-indigo-600 text-white rounded-full mr-3 text-sm">1</span>
+                                Clone or Download the Repository
+                            </h4>
+                            <pre class="bg-gray-800 rounded p-4 text-gray-300 overflow-x-auto text-sm"><code>git clone https://github.com/Navgoat/pen-project.git
+cd pen-project</code></pre>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 bg-indigo-600 text-white rounded-full mr-3 text-sm">2</span>
+                                Create a Python Virtual Environment
+                            </h4>
+                            <pre class="bg-gray-800 rounded p-4 text-gray-300 overflow-x-auto text-sm"><code>python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate</code></pre>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 bg-indigo-600 text-white rounded-full mr-3 text-sm">3</span>
+                                Install Dependencies
+                            </h4>
+                            <pre class="bg-gray-800 rounded p-4 text-gray-300 overflow-x-auto text-sm"><code>pip install -r requirements.txt</code></pre>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 bg-indigo-600 text-white rounded-full mr-3 text-sm">4</span>
+                                Run the Application
+                            </h4>
+                            <pre class="bg-gray-800 rounded p-4 text-gray-300 overflow-x-auto text-sm"><code>python app.py
+# Application will start at http://localhost:5000</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-white mb-12">Ideal Use Cases</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 border border-gray-700">
+                        <i data-feather="book-open" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Educational Labs</h3>
+                        <p class="text-gray-300">Learn Flask authentication patterns and secure coding practices in a controlled environment.</p>
+                    </div>
+
+                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 border border-gray-700">
+                        <i data-feather="shield-alert" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Penetration Testing</h3>
+                        <p class="text-gray-300">Practice identifying and exploiting common authentication vulnerabilities in a safe sandbox.</p>
+                    </div>
+
+                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 border border-gray-700">
+                        <i data-feather="code" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Secure Development</h3>
+                        <p class="text-gray-300">Understand how to implement authentication securely and defend against common attack vectors.</p>
+                    </div>
+
+                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 border border-gray-700">
+                        <i data-feather="graduation-cap" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Academic Coursework</h3>
+                        <p class="text-gray-300">Use as a reference implementation for cybersecurity and web development courses.</p>
+                    </div>
+
+                    <div class="text-gray-300">
+                        <i data-feather="tool" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Portfolio Demonstration</h3>
+                        <p class="text-gray-300">Show your understanding of security principles and Flask development to employers.</p>
+                    </div>
+
+                    <div class="bg-gray-800 bg-opacity-60 rounded-lg p-6 border border-gray-700">
+                        <i data-feather="users" class="h-10 w-10 text-indigo-400 mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-3">Team Learning</h3>
+                        <p class="text-gray-300">Share with peers to collectively understand authentication security and best practices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="py-20 bg-gradient-to-r from-indigo-900 via-purple-900 to-gray-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Ready to Explore?</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Check out the full source code on GitHub, review the implementation details, and start learning about secure authentication patterns.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://github.com" 
+                       target="_blank"
+                       class="inline-flex items-center px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition duration-300">
+                        <i data-feather="github" class="h-5 w-5 mr-2"></i>
+                        View Full Source Code
+                    </a>
+                    <a href="index.HTML#projects"
+                       class="inline-flex items-center px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white font-medium rounded-lg transition duration-300 border border-gray-600">
+                        <i data-feather="arrow-left" class="h-5 w-5 mr-2"></i>
+                        Back to Projects
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-95 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <p class="text-gray-500 text-sm">&copy; 2025 Navroj Billing | CS Portfolio. All rights reserved.</p>
+            <div class="flex items-center space-x-4 mt-4 md:mt-0">
+                <p class="text-gray-500 text-sm flex items-center">
+                    <i data-feather="mail" class="h-4 w-4 mr-2"></i>
+                    <a href="mailto:billingnavroj@gmail.com" class="text-gray-300 hover:text-white transition duration-300">
+                        billingnavroj@gmail.com
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Feather icons after DOM is loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.feather) {
+                feather.replace();
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
